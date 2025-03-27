@@ -1,0 +1,86 @@
+.swiper {
+    width: 100%;
+    height: 554px;
+}
+
+.swiper-button-prev {
+    --swiper-navigation-size: 120px;
+    content: url('http://localhost:3000/assets/icons/carousel-navigation-left.svg');
+}
+
+.swiper-button-next {
+    --swiper-navigation-size: 120px;
+    content: url('http://localhost:3000/assets/icons/carousel-navigation-right.svg');
+}
+
+.text-max-3-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Hiển thị ... nếu văn bản bị cắt */
+}
+
+/* .swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+} */
+
+/* swiper-slide img {
+    display: block;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+} */
+
+.banner {
+    aspect-ratio: 1.33333;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* need to be fixed */
+    border-radius: 20px;
+    border: 1px solid var(--Mono-Color-Light-Gray);
+}
+
+
+.my-swiper-slide {
+    display: grid;
+    grid-template-areas:
+        "banner title"
+        "banner description";
+    grid-template-columns: 1fr 1fr;
+    gap: 5px; /*border width */
+    background-color: #FFF;
+    padding: 5px;
+    align-content: center;
+
+}
+
+.my-swiper-slide > .banner-container {
+    background-color: #FFF;
+    grid-area: banner;
+    justify-self: center;
+    border-radius: 20px;
+    margin-left: 80px;
+    margin-right: 56px;
+    overflow: hidden; 
+    border-color: black;
+}
+
+.my-swiper-slide > .title {
+    grid-area: title;
+    background-color: #FFF;
+    font-size: 40px;
+    margin-right: 80px;
+    font-weight: bold;
+    align-self: end;
+}
+
+.my-swiper-slide > .description {
+    grid-area: description;
+    background-color: #FFF;
+    font-size: 18px;
+    margin-right: 80px;
+}

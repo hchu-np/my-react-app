@@ -1,0 +1,33 @@
+/*Dialog box*/
+.dialog_box {
+	position: relative;
+    padding: 8px;
+	background: #dcb567;
+}
+.dialog_box:after, .dialog_box:before {
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.dialog_box:after {
+	border-width: 1px;
+}
+.dialog_box:before {
+	border-width: 15px;
+}
+
+/*Arrow pointing BOTTOM*/
+.dialog_box.bottom:after, .dialog_box.bottom:before {
+	left: 50%;
+	top: 100%;
+}
+.dialog_box.bottom:after {
+	border-color:  var(--Accent-Color-Gold) transparent transparent transparent ;
+	margin-left: -1px;
+}
+.dialog_box.bottom:before {
+	border-color:  var(--Accent-Color-Gold) transparent transparent transparent ;
+	margin-left: -15px;
+}

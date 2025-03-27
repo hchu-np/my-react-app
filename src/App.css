@@ -1,38 +1,352 @@
-.App {
-  text-align: center;
+:root {
+    --Accent-Color-Gold: #DCB567;
+    --Mono-Color-Black: #132333;
+    --Mono-Color-Gray: #718899;
+    --Mono-Color-Light-Gray: #D8E1EB;
+    --pink: #dc67a3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    /* font-family: Arial, sans-serif; */
+    font-family: "Noto Sans JP";
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    color: #132333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* center-vertical */
+    align-items: center;
+    /* center-horizontal */
+    background-color: #FFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #132333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-content {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+#recommend {
+    width: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+h1.heading {
+    text-transform: uppercase;
+    /* PC/h2 */
+    font-family: "Noto Sans JP";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 42px */
+    letter-spacing: 1.12px;
+
+    span {
+        background-color: #FFF;
+        display: inline-block;
+        z-index: 1;
+        padding-right: 25px;
+    }
+}
+
+h1.heading:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 26px;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+
+    border-top: 3px solid var(--Accent-Color-Gold);
+    border-bottom: 1px solid var(--Accent-Color-Gold);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    display: flex;
+}
+
+nav ul li a {
+    color: #132333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+
+/* img {
+    max-width: 100%;
+    height: auto;
+} */
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {}
+
+footer {
+    background-color: #333;
+    color: #132333;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.top-bot-border {
+    border-top: 1px solid #ABBCCC;
+    border-bottom: 1px solid #ABBCCC;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 46px;
+    align-items: center;
+}
+
+.menu-icons {
+    justify-content: center;
+}
+
+.icon-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    gap: 50px;
+    /* Adjust the gap between icon-button as needed, doesnt work */
+}
+
+.shops {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 24px;
+    height: auto;
+}
+
+.ariticles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.ariticles .top-section {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.ariticle-top .title {
+    color: var(--Mono-Color-Black, #132333);
+    /* PC/card_title_l */
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+
+    margin: 0 0 20px 0;
+}
+
+.ariticles .date {
+    color: var(--Mono-Color-Gray, #718899);
+
+    /* PC/date */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 16px */
+
+    margin-right: 8px;
+}
+
+.ariticles .category {
+    color: var(--Mono-Color-Gray, #718899);
+
+    /* PC/category */
+    font-family: "Noto Sans JP";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 15px */
+}
+
+.ariticle-bot .title {
+    color: var(--Mono-Color-Black, #132333);
+    /* PC/card_title_m */
+    font-family: "Noto Sans JP";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+
+    margin: 0 0 24px 0;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.ariticle-top .short-desc {
+    color: var(--Mono-Color-Black, #132333);
+    /* PC/body_s */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+
+    margin: 0 0 32px 0;
+}
+
+.ariticles .bot-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.shop-container {
+    width: 50%;
+}
+
+.shop-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+}
+
+.ariticle-bot {
+    display: grid;
+    column-gap: 24px;
+    grid-template-areas:
+        "img title"
+        "img meta-data";
+    flex: 1;
+
+}
+
+.ariticle-bot>img {
+    grid-area: img;
+    /* object-fit: cover; */
+    flex: 0 0 50%;
+    width: 200px;
+}
+
+.ariticle-bot>.title {
+    grid-area: title;
+}
+
+.ariticle-bot>.meta-data {
+    grid-area: meta-data;
+}
+
+.shop-img,
+.ariticles img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+
+    border-radius: 40px;
+    border: 1px solid var(--Mono-Color-Light-Gray);
+
+    object-fit: contain;
+    /* object-position: center; */
+}
+
+.logo-site {
+    height: 16px;
+    width: auto;
+    margin-right: 18px;
+    margin-top: 12px;
+}
+
+.shop-name {
+    color: #132333;
+    /* PC/body_strong_m */
+    font-family: "Noto Sans JP";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%;
+    margin: 4px 0px;
+}
+
+.shop-campaign {
+    color: var(--Mono-Color-Gray);
+    text-align: left;
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 4px 0px;
+}
+
+.single-line {
+    white-space: nowrap;
+    /* Không cho văn bản xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần văn bản bị tràn ra ngoài */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu '...' khi không đủ không gian */
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+}
+
+.show-more {
+    color: var(--Mono-Color-Black, #132333);
+    text-align: center;
+    /* button_m */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+
+    padding: 12px 44px;
+    border-radius: 32px;
+    border: 1px solid var(--Mono-Color-Soft-Gray, #ABBCCC);
+    background: var(--Mono-Color-White, #FFF);
+    margin-top: 40px;
+
+    /* margin: 0 auto; */
+
+    text-decoration: none;
+    /*remove underline*/
 }
